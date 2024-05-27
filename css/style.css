@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'standard-serif';
+    src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'header-font';
+    src: url('../fonts/BDOGrotesk-VF.woff2') format('woff2');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #212720;
+    font-size: 20vw;
+    margin: 20vw 0 -100px 0;
+    font-family: 'header-font';
+}
+
+spacer {
+    display: block;
+    height: 300vh;
+}
+
+.header-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    clip-path: inset(20%);
+}
