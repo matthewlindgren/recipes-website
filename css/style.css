@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'standard-serif';
-    src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
+    src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype');
 }
 
 @font-face {
@@ -25,6 +25,20 @@ h1 {
 spacer {
     display: block;
     height: 300vh;
+}
+
+nav {
+    margin: 4vh 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: rgb(33, 39, 33);
+    font-family: 'standard-serif', Helvetica, sans-serif;
+    margin: 0 15px;
+    font-size: 2.5vw;
+    text-transform: uppercase;
 }
 
 .header-img {
