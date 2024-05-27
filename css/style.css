@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'standard-serif';
-    src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype');
+    src: url('../fonts/PPNeueMontreal-Bold.otf') format('opentype');
 }
 
 @font-face {
@@ -18,7 +18,7 @@ h1 {
     text-align: center;
     color: #212720;
     font-size: 20vw;
-    margin: 20vw 0 -100px 0;
+    margin: 14vw 0 -100px 0;
     font-family: 'header-font';
 }
 
@@ -28,17 +28,36 @@ spacer {
 }
 
 nav {
-    margin: 4vh 0;
+    margin: 8vh 0;
     display: flex;
     justify-content: center;
 }
 
 nav a {
-    color: rgb(33, 39, 33);
+    color: #212721;
     font-family: 'standard-serif', Helvetica, sans-serif;
-    margin: 0 15px;
-    font-size: 2.5vw;
+    margin: 0 4vw;
+    font-size: 2vw;
     text-transform: uppercase;
+    position: relative;
+    color: #212721;
+}
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #212721;
+    transform-origin: bottom right;
+    transition: transform 500ms ease-out;
+    bottom: -4px;
+}
+nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .header-img {
@@ -46,4 +65,22 @@ nav a {
     height: 100vh;
     object-fit: cover;
     clip-path: inset(20%);
+}
+
+.shiny {
+    background-image: -webkit-linear-gradient(left, rgba(33,39,33,1) 0%, rgba(207,204,194,1) 50%, rgba(33,39,33,1) 100%);
+    background-image: linear-gradient(90deg, rgba(33,39,33,1) 25%, rgba(207,204,194,1) 50%, rgba(33,39,33,1) 75%);
+    background-position: right center;
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #212721;
+    -webkit-text-fill-color: transparent;
+    transition: color 4000ms linear;
+}
+
+.shiny:hover, .shiny:focus {
+    background-position: left center;
+    color: #212721;
+    transition: background-position 1000ms ease-out;
 }
