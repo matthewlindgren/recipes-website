@@ -22,12 +22,20 @@ h1 {
     font-family: 'header-font';
 }
 
+h2 {
+    font-family: 'header-font';
+    color: #212720;
+    font-size: 18vw;
+    margin: 10vh 0 3vw 4vw;
+}
+
 spacer {
     display: block;
     height: 300vh;
 }
 
 nav {
+    position: sticky;
     margin: 8vh 0;
     display: flex;
     justify-content: center;
@@ -84,3 +92,4 @@ nav a:hover:after {
     color: #212721;
     transition: background-position 1000ms ease-out;
 }
+

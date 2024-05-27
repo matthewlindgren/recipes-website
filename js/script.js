@@ -1,6 +1,6 @@
 // on load
 const headerImage = document.querySelector('.header-img');
-headerImage.style.marginBottom = "100vh";
+headerImage.style.marginBottom = "105vh";
 
 const windowHeight = window.innerHeight;
 const halfWindowHeight = windowHeight / 2;
