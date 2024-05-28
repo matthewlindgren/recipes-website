@@ -1,8 +1,11 @@
 @font-face {
-    font-family: 'standard-serif';
+    font-family: 'standard-serif-bold';
     src: url('../fonts/PPNeueMontreal-Bold.otf') format('opentype');
 }
-
+@font-face {
+    font-family: 'standard-serif';
+    src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype');
+}
 @font-face {
     font-family: 'header-font';
     src: url('../fonts/BDOGrotesk-VF.woff2') format('woff2');
@@ -16,7 +19,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #212720;
+    color: #212721;
     font-size: 20vw;
     margin: 14vw 0 -100px 0;
     font-family: 'header-font';
@@ -24,9 +27,27 @@ h1 {
 
 h2 {
     font-family: 'header-font';
-    color: #212720;
+    color: #212721;
     font-size: 16vw;
     margin: 10vh 0 3vw 4vw;
+}
+
+h3 {
+    font-family: 'standard-serif';
+    color: #212721;
+    text-transform: uppercase;
+    font-size: 3vw;
+    margin: 0 0 1.4vh 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'standard-serif';
+    color: #212721;
+    font-size: 1.75vw;
+    line-height: 1.5;
+    margin: 0;
+
 }
 
 spacer {
@@ -43,7 +64,7 @@ nav {
 
 nav a {
     color: #212721;
-    font-family: 'standard-serif', Helvetica, sans-serif;
+    font-family: 'standard-serif-bold', Helvetica, sans-serif;
     margin: 0 4vw;
     font-size: 2vw;
     text-transform: uppercase;
@@ -93,3 +114,16 @@ nav a:hover:after {
     transition: background-position 1000ms ease-out;
 }
 
+.side-by-side {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 4vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-by-side > * {
+    padding: 4% 4%;
+    flex: 1 1 300px;
+    min-width: 300px;
+}

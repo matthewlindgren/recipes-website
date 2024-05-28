@@ -1,10 +1,23 @@
 // on load
 const headerImage = document.querySelector('.header-img');
 headerImage.style.marginBottom = "105vh";
+let windowHeight = window.innerHeight;
+let halfWindowHeight = windowHeight / 2;
+let scrollStart = getElementMidPosition(headerImage) - (halfWindowHeight)
 
-const windowHeight = window.innerHeight;
-const halfWindowHeight = windowHeight / 2;
-const scrollStart = getElementMidPosition(headerImage) - (halfWindowHeight)
+addEventListener("orientationchange", (event) => {
+    windowHeight = window.innerHeight;
+    halfWindowHeight = windowHeight / 2;
+    scrollStart = getElementMidPosition(headerImage) - (halfWindowHeight);
+    headerImage.style.marginBottom = "105vh";
+});
+
+addEventListener("resize", (event) => {
+    windowHeight = window.innerHeight;
+    halfWindowHeight = windowHeight / 2;
+    scrollStart = getElementMidPosition(headerImage) - (halfWindowHeight);
+});
+
 document.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
 

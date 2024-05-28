@@ -1,0 +1,83 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px; /* Adjust the gap between images if needed */
+}
+
+.grid-item {
+    display: flex;
+}
+
+.grid-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures the images maintain their aspect ratio */
+}
+
+/* Positioning each image within its grid cell */
+.top-left {
+    justify-content: end;
+    align-items: end;
+}
+.top-left img {
+    animation: top-left-animation linear forwards;
+    animation-timeline: view();
+    animation-range: 5vh 30vh;
+    transform: translateY(-5vh);
+}
+@keyframes top-left-animation {
+    from {transform: translateY(-5vh);}
+    to {transform: translateY(0);}
+}
+
+
+.top-right {
+    justify-content: start;
+    align-items: end;
+    width: 90%;
+}
+.top-right img {
+    animation: top-right-animation linear forwards;
+    animation-timeline: view();
+    animation-range: 5vh 30vh;
+    transform: translateX(5vw);
+}
+@keyframes top-right-animation {
+    from {transform: translateX(5vw);}
+    to {transform: translateX(0);}
+}
+
+
+.bottom-right {
+    justify-content: start;
+    align-items: start;
+}
+.bottom-right img {
+    animation: bottom-right-animation linear forwards;
+    animation-timeline: view();
+    animation-range: 5vh 20vh;
+    transform: translateY(5vh);
+}
+@keyframes bottom-right-animation {
+    from {transform: translateY(5vh);}
+    to {transform: translateY(0);}
+    
+}
+
+
+.bottom-left {
+    justify-content: flex-end;
+    align-items: start;
+}
+.bottom-left img {
+    animation: bottom-left-animation linear forwards;
+    animation-timeline: view();
+    animation-range: 5vh 20vh;
+    max-width: 90%;
+    transform: translateX(-5vw);
+}
+@keyframes bottom-left-animation {
+    from {transform: translateX(-5vw);}
+    to {transform: translateX(0);}
+}

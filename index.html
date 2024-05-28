@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Expand Image</title>
+    <link rel="icon" type="image/x-icon" href="assets/PriestLake-2.jpg">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid-styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a class="shiny" tabindex="0">about</a>
-            <a class="shiny" tabindex="0">all recipes</a>
+            <a class="shiny" tabindex="0" href="#about">about</a>
+            <a class="shiny" tabindex="0" href="#all-recipes">all recipes</a>
             <a class="shiny" tabindex="0">family</a>
         </nav>
     </header>
     <h1>recipes</h1>
     <img src="assets/PriestLake-2.jpg" alt="Sunset of dock at Priest Lake" class="header-img">
-    <h2>about</h2>
+    <h2 id="about">about</h2>
+    <div class="side-by-side">
+        <div>
+            <h3>family roots</h3>
+            <p>Since the 1950s, the Davidson and Clinton families have vacationed at Elkins Resort at Priest Lake, Idaho. After several decades, various recipes have been shared. This serves as a collection for them.</p>
+        </div>
+        <div class="image-grid">
+            <div class="grid-item top-left"><img src="assets/PriestLake-1.jpg" alt="Image 1"></div>
+            <div class="grid-item top-right"><img src="assets/PriestLake-6.jpg" alt="Image 2"></div>
+            <div class="grid-item bottom-left"><img src="assets/PriestLake-4.jpg" alt="Image 3"></div>
+            <div class="grid-item bottom-right"><img src="assets/PriestLake-5.jpg" alt="Image 4"></div>
+        </div>
+    </div>
+    <h2 id="all-recipes">all recipes</h2>
     <spacer>
     <script src="js/script.js"></script>
 </body>
