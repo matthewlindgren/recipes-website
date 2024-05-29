@@ -23,7 +23,7 @@
 .top-left img {
     animation: top-left-animation linear forwards;
     animation-timeline: view();
-    animation-range: 5vh 30vh;
+    animation-range: 5vh 40vh;
     transform: translateY(-5vh);
 }
 @keyframes top-left-animation {
@@ -40,7 +40,7 @@
 .top-right img {
     animation: top-right-animation linear forwards;
     animation-timeline: view();
-    animation-range: 5vh 30vh;
+    animation-range: 5vh 40vh;
     transform: translateX(5vw);
 }
 @keyframes top-right-animation {
@@ -56,7 +56,7 @@
 .bottom-right img {
     animation: bottom-right-animation linear forwards;
     animation-timeline: view();
-    animation-range: 5vh 20vh;
+    animation-range: 5vh 30vh;
     transform: translateY(5vh);
 }
 @keyframes bottom-right-animation {
@@ -73,7 +73,7 @@
 .bottom-left img {
     animation: bottom-left-animation linear forwards;
     animation-timeline: view();
-    animation-range: 5vh 20vh;
+    animation-range: 5vh 30vh;
     max-width: 90%;
     transform: translateX(-5vw);
 }
