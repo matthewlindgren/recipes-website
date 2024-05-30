@@ -248,3 +248,7 @@ nav a:hover:after {
     min-width: 10vw;
     text-transform: uppercase;
 }
+.selected {
+    background: rgba(0, 0, 0, 0.62);
+    color: white;
+}

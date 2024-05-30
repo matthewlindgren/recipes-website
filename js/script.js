@@ -5,6 +5,8 @@ let windowHeight = window.innerHeight;
 let halfWindowHeight = windowHeight / 2;
 let scrollStart = getElementMidPosition(headerImage) - (halfWindowHeight)
 
+
+// fixing scroll variables on screen size change
 addEventListener("orientationchange", (event) => {
     windowHeight = window.innerHeight;
     halfWindowHeight = windowHeight / 2;
@@ -18,6 +20,8 @@ addEventListener("resize", (event) => {
     scrollStart = getElementMidPosition(headerImage) - (halfWindowHeight);
 });
 
+
+// scrolling animation for the header image
 document.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
 
@@ -42,6 +46,7 @@ function getElementMidPosition(element) {
     return element.getBoundingClientRect().top + window.scrollY + (element.height / 2);
 }
 
+
 // toggle hidden image
 document.querySelectorAll('.more-recipes').forEach(moreRecipes => {
     moreRecipes.addEventListener('mouseenter', () => {
@@ -56,5 +61,13 @@ document.querySelectorAll('.more-recipes').forEach(moreRecipes => {
         if (rotatingTextImg) {
             rotatingTextImg.classList.add('hidden');
         }
+    });
+});
+
+
+// toggle selected class for mixitup buttons
+document.querySelectorAll('.filters button').forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('selected');
     });
 });
