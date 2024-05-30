@@ -68,6 +68,14 @@ document.querySelectorAll('.more-recipes').forEach(moreRecipes => {
 // toggle selected class for mixitup buttons
 document.querySelectorAll('.filters button').forEach(button => {
     button.addEventListener('click', () => {
+        // remove selected class for every button
+        document.querySelectorAll('.filters button').forEach(otherButton => {
+            if (otherButton.classList.contains('selected')) {
+                otherButton.classList.toggle('selected');
+            }
+        });
+
+        // add the selected class for the clicked button
         button.classList.toggle('selected');
     });
 });
