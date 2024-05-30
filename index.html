@@ -33,6 +33,14 @@
         </div>
     </div>
     <h2 id="all-recipes">all recipes</h2>
+    <div class="filters">
+        <button type="button" class="mixbutton" data-filter="all">All</button>
+        <button type="button" class="mixbutton" data-filter=".breakfast">Breakfast</button>
+        <button type="button" class="mixbutton" data-filter=".lunch">Lunch</button>
+        <button type="button" class="mixbutton" data-filter=".dinner">Dinner</button>
+        <button type="button" class="mixbutton" data-filter=".dessert">Dessert</button>
+        <button type="button" class="mixbutton" data-filter=".snacks">Snacks</button>
+    </div>
     <div class="recipes">
         <div class="recipe">
             <h4>Cheesy Potatoes</h4>
@@ -54,5 +62,9 @@
         </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script>
+        var mixer = mixitup(document.querySelector('.recipes'));
+    </script>
 </body>
 </html>
