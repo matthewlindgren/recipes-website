@@ -157,15 +157,13 @@ nav a:hover:after {
     border: 1px solid rgba(255, 255, 255, 0.64);
     padding: 20px;
     margin: 30px;
-    max-width: 25vw;
-    min-height: 30vh;
-
+    width: 25vw;
+}
+.recipe * {
+    max-width: 100%;
 }
 .recipe-owner {
     color: rgb(46, 46, 46);
-}
-.recipe-details {
-    
 }
 
 .more-recipes {
