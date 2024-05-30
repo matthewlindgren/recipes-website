@@ -41,3 +41,20 @@ document.addEventListener('scroll', function() {
 function getElementMidPosition(element) {
     return element.getBoundingClientRect().top + window.scrollY + (element.height / 2);
 }
+
+// toggle hidden image
+document.querySelectorAll('.more-recipes').forEach(moreRecipes => {
+    moreRecipes.addEventListener('mouseenter', () => {
+        const rotatingTextImg = moreRecipes.querySelector('.rotating-text img');
+        if (rotatingTextImg) {
+            rotatingTextImg.classList.remove('hidden');
+        }
+    });
+
+    moreRecipes.addEventListener('mouseleave', () => {
+        const rotatingTextImg = moreRecipes.querySelector('.rotating-text img');
+        if (rotatingTextImg) {
+            rotatingTextImg.classList.add('hidden');
+        }
+    });
+});

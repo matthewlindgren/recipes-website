@@ -98,6 +98,10 @@ nav a:hover:after {
     transform-origin: bottom left;
 }
 
+.hidden {
+    display: none;
+}
+
 .header-img {
     width: 100vw;
     height: 100vh;
@@ -159,4 +163,66 @@ nav a:hover:after {
 }
 .recipe-owner {
     color: rgb(46, 46, 46);
+}
+
+.more-recipes {
+    width: 100%;
+    padding: 30% 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more-recipes:hover, .more-recipes:focus {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fullscreen-glyph {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.fullscreen-glyph img {
+    width: 25%;
+    padding: 30px;
+}
+
+.rotating-text {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.rotating-text img {
+    width: 50%;
+    padding: 30px;
+    animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.type-text {
+    font-family: 'standard-serif', Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6vw;
+    color: rgb(62, 62, 62);
+    text-align: right;
 }
