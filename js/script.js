@@ -48,16 +48,16 @@ function getElementMidPosition(element) {
 
 
 // toggle hidden image
-document.querySelectorAll('.more-recipes').forEach(moreRecipes => {
-    moreRecipes.addEventListener('mouseenter', () => {
-        const rotatingTextImg = moreRecipes.querySelector('.rotating-text img');
+document.querySelectorAll('.show-recipe').forEach(showRecipe => {
+    showRecipe.addEventListener('mouseenter', () => {
+        const rotatingTextImg = showRecipe.querySelector('.rotating-text');
         if (rotatingTextImg) {
             rotatingTextImg.classList.remove('hidden');
         }
     });
 
-    moreRecipes.addEventListener('mouseleave', () => {
-        const rotatingTextImg = moreRecipes.querySelector('.rotating-text img');
+    showRecipe.addEventListener('mouseleave', () => {
+        const rotatingTextImg = showRecipe.querySelector('.rotating-text');
         if (rotatingTextImg) {
             rotatingTextImg.classList.add('hidden');
         }
@@ -77,5 +77,23 @@ document.querySelectorAll('.filters button').forEach(button => {
 
         // add the selected class for the clicked button
         button.classList.toggle('selected');
+    });
+});
+
+
+// expand recipe cards
+document.querySelectorAll('.show-recipe').forEach(item => {
+    item.addEventListener('click', event => {
+        const recipeCard = event.currentTarget.closest('.recipe');
+        recipeCard.classList.toggle('expanded');
+
+        const recipeDetails = recipeCard.querySelector('.recipe-details');
+        recipeDetails.classList.toggle('hidden');
+
+        const glyph = event.currentTarget.querySelector('.fullscreen-glyph');
+        glyph.src = glyph.src.includes('fullscreen') ? 'assets/shrink-glyph.svg' : 'assets/fullscreen-glyph.svg';
+
+        const rotatingText = event.currentTarget.querySelector('.rotating-text');
+        rotatingText.src = rotatingText.src.includes('view') ? 'assets/shrink-recipe-wheel.png' : 'assets/view-recipe-wheel.png';
     });
 });

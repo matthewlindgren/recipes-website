@@ -15,6 +15,7 @@
     src: url('../fonts/Panchang/Panchang-Bold.otf') format('opentype');
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -48,6 +49,13 @@ h3 {
 h4 {
     font-family: 'recipe-title';
     font-size: 3vw;
+}
+
+h5 {
+    font-family: 'standard-serif-bold', Helvetica, sans-serif;
+    font-size: 2vw;
+    line-height: 1.5;
+    margin: 5px 0 2px;
 }
 
 p {
@@ -96,6 +104,23 @@ nav a:after {
 nav a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+li {
+    font-family: 'standard-serif';
+    color: #212721;
+    font-size: 1.75vw;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
 }
 
 .hidden {
@@ -147,85 +172,7 @@ nav a:hover:after {
     background-size: 100%;
     display: flex;
     justify-content: space-evenly;
-}
-.recipe {
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.64);
-    padding: 20px;
-    margin: 30px;
-    width: 25vw;
-}
-.recipe * {
-    max-width: 100%;
-}
-.recipe-owner {
-    color: rgb(46, 46, 46);
-}
-
-.more-recipes {
-    width: 100%;
-    padding: 30% 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.more-recipes:hover, .more-recipes:focus {
-    animation: pulse 2s infinite;
-}
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    70% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.fullscreen-glyph {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.fullscreen-glyph img {
-    width: 25%;
-    padding: 30px;
-}
-
-.rotating-text {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.rotating-text img {
-    width: 50%;
-    padding: 30px;
-    animation: rotate 10s linear infinite;
-}
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.type-text {
-    font-family: 'standard-serif', Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-size: 1.6vw;
-    color: rgb(62, 62, 62);
-    text-align: right;
+    flex-wrap: wrap;
 }
 
 .filters {
@@ -236,7 +183,6 @@ nav a:hover:after {
     margin-left: 20%;
     gap: 2vw;
 }
-
 .filters button {
     background: rgba(255, 255, 255, 0.62);
     border-radius: 16px;
@@ -253,4 +199,10 @@ nav a:hover:after {
     background: #212721;
     border: none;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.filters button:hover {
+    background: #252d25d5;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
